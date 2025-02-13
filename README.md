@@ -4,7 +4,8 @@
 ## 1. Project Overview
 The To-Do List application is a full-stack web application designed to help users manage their daily tasks efficiently. The backend is developed using Node.js and Express, and it uses MongoDB Atlas for cloud storage. The application is containerized using Docker and deployed on Render for easy access and testing.
 
-Test this backend project using Postman with the provided URLs. Since it uses cookies to store the authentication token (containing user_id and email), ensure that cookies are properly managed, as they are required for middleware authentication.
+Test this backend project using Postman with the provided URLs. Since it uses cookies to store the authentication token
+ (containing user_id and email), ensure that cookies are properly managed, as they are required for middleware authentication.
 
 Live API Link: https://todolist-v1-ikyj.onrender.com
 
