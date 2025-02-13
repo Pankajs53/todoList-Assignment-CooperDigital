@@ -61,7 +61,7 @@ Content-Type: application/json
 }
 
 # Register
-POST https://todolist-v1-ikyj.onrender.com/api/v1/auth/register
+POST https://todolist-v1-ikyj.onrender.com/api/v1/auth/signup
 Content-Type: application/json
 
 {
