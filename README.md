@@ -52,7 +52,7 @@ DockerHub Image: pankajs53/todolist:v1
 #### Authentication & To-Do Management
 ```http
 # Login
-POST https://todolist-v1-ikyj.onrender.com/auth/login
+POST https://todolist-v1-ikyj.onrender.com/api/v1/auth/login
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ Content-Type: application/json
 }
 
 # Register
-POST https://todolist-v1-ikyj.onrender.com/auth/register
+POST https://todolist-v1-ikyj.onrender.com/api/v1/auth/register
 Content-Type: application/json
 
 {
@@ -71,21 +71,28 @@ Content-Type: application/json
 }
 
 # Create Task
-POST https://todolist-v1-ikyj.onrender.com/todos
+POST https://todolist-v1-ikyj.onrender.com/api/v1/todo/add
 Content-Type: application/json
 Cookie: token=JWT_TOKEN_HERE
 
 {
-  "title": "New Task",
-  "description": "Task details"
+  "title": "Complete Project Report",
+  "description": "Prepare the final report and submit it before the deadline.",
+  "status": "inprogress",
+  "priority": "high",
+  "dueDate": "2025-02-20"
 }
 
+
 # Get Tasks
-GET https://todolist-v1-ikyj.onrender.com/todos
+GET https://todolist-v1-ikyj.onrender.com/api/v1/todo/getAll
 Cookie: token=JWT_TOKEN_HERE
 
+#Get All Task
+GET https://todolist-v1-ikyj.onrender.com/api/v1/todo/getAll
+
 # Update Task
-PUT https://todolist-v1-ikyj.onrender.com/todos/:id
+PUT https://todolist-v1-ikyj.onrender.com/api/v1/todo/update/:id
 Content-Type: application/json
 Cookie: token=JWT_TOKEN_HERE
 
@@ -94,7 +101,7 @@ Cookie: token=JWT_TOKEN_HERE
 }
 
 # Delete Task
-DELETE https://todolist-v1-ikyj.onrender.com/todos/:id
+DELETE https://todolist-v1-ikyj.onrender.com/api/v1/todo/:id
 Cookie: token=JWT_TOKEN_HERE
 ```
 ---
