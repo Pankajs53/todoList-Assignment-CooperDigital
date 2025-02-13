@@ -84,12 +84,12 @@ Cookie: token=JWT_TOKEN_HERE
 }
 
 
-# Get Tasks
+# Get All Tasks
 GET https://todolist-v1-ikyj.onrender.com/api/v1/todo/getAll
 Cookie: token=JWT_TOKEN_HERE
 
-#Get All Task
-GET https://todolist-v1-ikyj.onrender.com/api/v1/todo/getAll
+#Get Task By id
+GET https://todolist-v1-ikyj.onrender.com/api/v1/todo/:id
 
 # Update Task
 PUT https://todolist-v1-ikyj.onrender.com/api/v1/todo/update/:id
