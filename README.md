@@ -48,10 +48,10 @@ DockerHub Image: pankajs53/todolist:v1
 
 ### 5.1 Postman API Documentation
 #### Base URL: `https://todolist-v1-ikyj.onrender.com`
-
-#### Authentication
-##### Login
+```
+#### Authentication & To-Do Management
 ```http
+# Login
 POST https://todolist-v1-ikyj.onrender.com/auth/login
 Content-Type: application/json
 
@@ -59,15 +59,8 @@ Content-Type: application/json
   "email": "user@example.com",
   "password": "password123"
 }
-```
-**Response:**
-```json
-{
-  "token": "JWT_TOKEN_HERE"
-}
-```
-##### Register
-```http
+
+# Register
 POST https://todolist-v1-ikyj.onrender.com/auth/register
 Content-Type: application/json
 
@@ -76,17 +69,8 @@ Content-Type: application/json
   "email": "john@example.com",
   "password": "password123"
 }
-```
-**Response:**
-```json
-{
-  "message": "Registration successful"
-}
-```
 
-#### To-Do Management
-##### Create Task
-```http
+# Create Task
 POST https://todolist-v1-ikyj.onrender.com/todos
 Content-Type: application/json
 Cookie: token=JWT_TOKEN_HERE
@@ -95,14 +79,12 @@ Cookie: token=JWT_TOKEN_HERE
   "title": "New Task",
   "description": "Task details"
 }
-```
-##### Get Tasks
-```http
+
+# Get Tasks
 GET https://todolist-v1-ikyj.onrender.com/todos
 Cookie: token=JWT_TOKEN_HERE
-```
-##### Update Task
-```http
+
+# Update Task
 PUT https://todolist-v1-ikyj.onrender.com/todos/:id
 Content-Type: application/json
 Cookie: token=JWT_TOKEN_HERE
@@ -110,18 +92,11 @@ Cookie: token=JWT_TOKEN_HERE
 {
   "title": "Updated Task"
 }
-```
-##### Delete Task
-```http
+
+# Delete Task
 DELETE https://todolist-v1-ikyj.onrender.com/todos/:id
 Cookie: token=JWT_TOKEN_HERE
 ```
-
-### 5.2 Why Use Postman for Testing?
-- **Token Storage:** After logging in, the JWT token is stored in cookies, which can be automatically used for subsequent requests.
-- **Easy API Testing:** Provides a user-friendly interface for making API requests without needing a frontend setup.
-- **Debugging & Response Inspection:** Helps inspect API responses, headers, and request payloads for debugging purposes.
-
 ---
 ## 6. Future Improvements
 - **Integrate Redis for caching** to reduce database load.
@@ -132,4 +107,3 @@ Cookie: token=JWT_TOKEN_HERE
 
 This documentation provides an overview of the architecture, features, API usage, and future improvements for the To-Do List application.
 ```
-
